@@ -1,5 +1,6 @@
 window.onload = ()=> {
     const sections = document.getElementsByTagName('section');
+    const headerTitle = document.querySelector('header h3 a');
     const btnRunRandomNumber = document.querySelector('input[run-app="random-number"]');
     const btnRunHeadsOrTails = document.querySelector('input[run-app="heads-or-tails"]');
 
@@ -10,13 +11,15 @@ window.onload = ()=> {
     const sectionRandomNumberBtnGen = document.querySelector('.random-number .btn');
 
     const sectionHeadsOrTails = document.getElementsByClassName('heads-or-tails')[0];
+    const sectionHeadsOrTailsAnswer = document.querySelector('.heads-or-tails span.answer');
+    const sectionHeadsOrTailsBtn = document.querySelector('.heads-or-tails .btn');
 
     btnRunRandomNumber.onmouseup = ()=> {
         if (!isDisplayed(sectionRandomNumber)) {
             hideAll();
             show(sectionRandomNumber);
         }
-
+        headerTitle.innerHTML = 'Генератор случайных чисел';
         runApp('random-number');
     }
     btnRunHeadsOrTails.onmouseup = ()=> {
@@ -24,7 +27,7 @@ window.onload = ()=> {
             hideAll();
             show(sectionHeadsOrTails);
         }
-
+        headerTitle.innerHTML = 'Орел или Решка';
         runApp('heads-or-tails');
     }
 
@@ -41,6 +44,7 @@ window.onload = ()=> {
             const element = sections[index];
             hide(element);
         }
+        headerTitle.innerHTML = 'Мини утилиты';
     }
 
     function isDisplayed(element) {
@@ -60,6 +64,17 @@ window.onload = ()=> {
 
                 let answer = randomInteger(min, max);
                 sectionRandomNumberAnswer.innerHTML = answer;
+            }
+        }
+
+        if (runAppName.toLowerCase() == 'heads-or-tails') {
+            sectionHeadsOrTailsBtn.onmouseup = ()=> {
+                let answer = Math.floor(Math.random() * 2);
+                if (answer) {
+                    sectionHeadsOrTailsAnswer.innerHTML = 'Орел';
+                } else {
+                    sectionHeadsOrTailsAnswer.innerHTML = 'Решка';
+                }
             }
         }
     }

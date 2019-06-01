@@ -19,6 +19,10 @@ a {
     max-width: 100%;
 }
 
+.ta-c {
+    text-align: center;
+}
+
 header h3 {
     text-align: center;
     color: #fff;
@@ -57,4 +61,23 @@ header {
 .card-group .card h3 {
     font-weight: 400;
     margin: 0;
+}
+
+section.heads-or-tails {
+    padding: 20px; 
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    background-color: #fff;
+}
+section.heads-or-tails span.answer {
+    font-weight: 600;
+    font-size: 26px;
+    font-style: italic;
+}
+section.heads-or-tails .btn {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 20px;
 }
