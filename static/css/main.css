@@ -5,3 +5,8 @@ body {
 * {
     font-family: 'Open Sans', sans-serif;
 }
+
+.container {
+    padding: 0 10px;
+    max-width: 100%;
+}
