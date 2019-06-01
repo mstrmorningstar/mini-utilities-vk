@@ -72,8 +72,10 @@ window.onload = ()=> {
                 let answer = Math.floor(Math.random() * 2);
                 if (answer) {
                     sectionHeadsOrTailsAnswer.innerHTML = 'Орел';
+                    console.log('Орел');
                 } else {
                     sectionHeadsOrTailsAnswer.innerHTML = 'Решка';
+                    console.log('Решка');
                 }
             }
         }
