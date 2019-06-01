@@ -33,7 +33,6 @@ header h3 {
 }
 header {
     background-color: #3a3d3f;
-    margin-bottom: 20px;
 }
 
 .random-number, .heads-or-tails {
@@ -45,6 +44,7 @@ header {
     border-radius: 20px;
     background-color: #fff;
     display: inline-block;
+    margin: 20px 10px;
 }
 .card-group .card .wrap {
     padding: 20px;
@@ -63,12 +63,23 @@ header {
     margin: 0;
 }
 
-section.heads-or-tails {
+#btn-back {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    display: none;
+}
+
+.sctn {
+    margin-top: 10px;
     padding: 20px; 
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
     border-radius: 20px;
     background-color: #fff;
 }
+
 section.heads-or-tails span.answer {
     font-weight: 600;
     font-size: 26px;

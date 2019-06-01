@@ -1,6 +1,8 @@
 window.onload = ()=> {
     const sections = document.getElementsByTagName('section');
     const headerTitle = document.querySelector('header h3 a');
+    const sectionCardGroup = document.getElementsByClassName('card-group')[0];
+    const btnBack = document.getElementById('btn-back');
     const btnRunRandomNumber = document.querySelector('input[run-app="random-number"]');
     const btnRunHeadsOrTails = document.querySelector('input[run-app="heads-or-tails"]');
 
@@ -14,20 +16,28 @@ window.onload = ()=> {
     const sectionHeadsOrTailsAnswer = document.querySelector('.heads-or-tails span.answer');
     const sectionHeadsOrTailsBtn = document.querySelector('.heads-or-tails .btn');
 
+    btnBack.onmouseup = ()=> {
+        hideAll();
+        show(sectionCardGroup);
+        hide(btnBack);
+    }
+
     btnRunRandomNumber.onmouseup = ()=> {
         if (!isDisplayed(sectionRandomNumber)) {
             hideAll();
             show(sectionRandomNumber);
+            show(btnBack);
+            headerTitle.innerHTML = 'Генератор случайных чисел';
         }
-        headerTitle.innerHTML = 'Генератор случайных чисел';
         runApp('random-number');
     }
     btnRunHeadsOrTails.onmouseup = ()=> {
         if (!isDisplayed(sectionHeadsOrTails)) {
             hideAll();
             show(sectionHeadsOrTails);
+            show(btnBack);
+            headerTitle.innerHTML = 'Орел или Решка';
         }
-        headerTitle.innerHTML = 'Орел или Решка';
         runApp('heads-or-tails');
     }
 
