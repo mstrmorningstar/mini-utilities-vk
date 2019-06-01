@@ -1,6 +1,6 @@
 window.onload = ()=> {
     const sections = document.getElementsByTagName('section');
-    const headerTitle = document.querySelector('header h3 a');
+    const headerTitle = document.querySelector('header h3');
     const sectionCardGroup = document.getElementsByClassName('card-group')[0];
     const btnBack = document.getElementById('btn-back');
     const btnRunRandomNumber = document.querySelector('input[run-app="random-number"]');
