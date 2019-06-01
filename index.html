@@ -6,15 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mini Utilities</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/mini-utilities-vk/static/css/main.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <script src="static/js/app.js"></script>
 </head>
 <body>
     <div id="root">
         <header>
             <div class="container">
-                <h2>Мини утилиты</h2>
+                <h3>Мини утилиты</h3>
             </div>
         </header>
+        <main>
+            <div class="container">
+                <section class="card-group">
+                    <div class="card">
+                        <div class="wrap">
+                            <h3>Генератор случайных чисел</h3>
+                        </div>
+                        <input class="btn start" type="button" value="ЗАПУСТИТЬ" run-app="random-number">
+                    </div>
+                    <div class="card">
+                        <div class="wrap">
+                            <h3>Орел или Решка</h3>
+                        </div>
+                        <input class="btn start" type="button" value="ЗАПУСТИТЬ" run-app="heads-or-tails">
+                    </div>
+                </section>
+                <section class="random-number">
+                    <span class="answer"></span>
+                    <input type="number" value="1" placeholder="Мин.">
+                    <input type="number" value="10" placeholder="Макс.">
+                    <input class="btn" type="button" value="СГЕНЕРИРОВАТЬ">
+                </section>
+                <section class="heads-or-tails">
+                    <input class="btn" type="button" value="ПОДБРОСИТЬ МОНЕТУ">
+                </section>
+            </div>       
+        </main>
     </div>
 </body>
 </html>
